@@ -1,0 +1,1445 @@
+{
+  "package": "RecruAI frontend-only handover",
+  "generated_at": "2026-11-13T15:12:22.274Z",
+  "baseline": {
+    "captured_at": "2026-11-13T15:10:01.046Z",
+    "branch": "adeeldev",
+    "head": "47f2cd01c0a15f91ff9bafb18ecfcd26180ddcea",
+    "commits_ahead_of_underdev": [
+      "47f2cd0 2026-11-13 10:23:47 +0500 feat: add admin dashboard components and project audit reports"
+    ],
+    "status_counts": {
+      "D": 27,
+      "M": 147,
+      "??": 64
+    },
+    "protected_sha256": {
+      "frontend/src/pages/SystemStatus.jsx": "557b9ff4570d2b6d73bdcaa6c50d6599987e2b649904f9951052fe61a61fbdfc",
+      "admin/src/index.css": "d9d4fc0baa5c99abf97a0a6265a7cf7abdf0d0cec340b11ae1d9ae0d47535665"
+    },
+    "copied_files": 184,
+    "required_additions": 41,
+    "deletions": 25
+  },
+  "counts": {
+    "modified": 142,
+    "added": 42,
+    "deleted": 25,
+    "apply_rows": 184
+  },
+  "apply": [
+    {
+      "from": "patch/frontend/package-lock.json",
+      "to": "frontend/package-lock.json",
+      "operation": "replace",
+      "sha256": "99f2a01e9c03e705d3dc72a6afc84d3f48d264786776e605ddc687a0c7d0acbf",
+      "bytes": 776954
+    },
+    {
+      "from": "patch/frontend/package.json",
+      "to": "frontend/package.json",
+      "operation": "replace",
+      "sha256": "c7dcf8199ea8ec3a6535fe2426c25b93c7aed1c2aec1d31844d7d2a7f29142ce",
+      "bytes": 2191
+    },
+    {
+      "from": "patch/frontend/public/index.html",
+      "to": "frontend/public/index.html",
+      "operation": "replace",
+      "sha256": "5c943619aef06ad350dfa7faccf1519875477326e8628671eff211fd480026ac",
+      "bytes": 2110
+    },
+    {
+      "from": "patch/frontend/src/App.js",
+      "to": "frontend/src/App.js",
+      "operation": "replace",
+      "sha256": "32991ab14c860c9e6a8686a7b69f503b82dc62210fca34ad18db161051c1dd1e",
+      "bytes": 36051
+    },
+    {
+      "from": "patch/frontend/src/components/CTA.js",
+      "to": "frontend/src/components/CTA.js",
+      "operation": "replace",
+      "sha256": "ee11a796decec3c47ef1ba299dad794540513f87fe8e65b35ca571d5bb338b42",
+      "bytes": 4184
+    },
+    {
+      "from": "patch/frontend/src/components/CustomerSegments.js",
+      "to": "frontend/src/components/CustomerSegments.js",
+      "operation": "replace",
+      "sha256": "6a2eb5f2543fc02ddb4880ce54beaaf7676dd2ee9056975c61bb8c788099b8a1",
+      "bytes": 5724
+    },
+    {
+      "from": "patch/frontend/src/components/FeaturedJobs.js",
+      "to": "frontend/src/components/FeaturedJobs.js",
+      "operation": "replace",
+      "sha256": "30fb7925978aab05f724caea266ddb8be0d80b308dae26fef0e031dde8ed03c0",
+      "bytes": 5333
+    },
+    {
+      "from": "patch/frontend/src/components/Features.js",
+      "to": "frontend/src/components/Features.js",
+      "operation": "replace",
+      "sha256": "e45a2dea654d1b6441fb90f7823ef32d927d1593afb2490be2a377374ab13935",
+      "bytes": 14469
+    },
+    {
+      "from": "patch/frontend/src/components/Footer.js",
+      "to": "frontend/src/components/Footer.js",
+      "operation": "replace",
+      "sha256": "483940828de326f7931603aaa08c848ff9599ab9de0e8a9977dd0ed1c9b30451",
+      "bytes": 10961
+    },
+    {
+      "from": "patch/frontend/src/components/Hero.js",
+      "to": "frontend/src/components/Hero.js",
+      "operation": "replace",
+      "sha256": "fdd25347eb5b2519f0a7748e69854125205f6b43dfa4c4647b5672e4a72c2386",
+      "bytes": 17043
+    },
+    {
+      "from": "patch/frontend/src/components/HowItWorks.js",
+      "to": "frontend/src/components/HowItWorks.js",
+      "operation": "replace",
+      "sha256": "42df9bf655f0efb6233d087c6b5d1a5e737ec7f5f7021abee7332c59be956c35",
+      "bytes": 11436
+    },
+    {
+      "from": "patch/frontend/src/components/Pricing.js",
+      "to": "frontend/src/components/Pricing.js",
+      "operation": "replace",
+      "sha256": "270124bd9ca2640963cf02dc5874ba95dbc6f07658aa3492128f001f3053d2fa",
+      "bytes": 9946
+    },
+    {
+      "from": "patch/frontend/src/components/RequireOrganization.js",
+      "to": "frontend/src/components/RequireOrganization.js",
+      "operation": "replace",
+      "sha256": "4029f616dc6964c843d4e22799efe317f427524c5fc2c73f606d36c711a8b60c",
+      "bytes": 2230
+    },
+    {
+      "from": "patch/frontend/src/components/Testimonials.js",
+      "to": "frontend/src/components/Testimonials.js",
+      "operation": "replace",
+      "sha256": "141d51fb5ff71ba0f8842b8e0837004c684b1b50c5b18ce29ac1fdf744930d86",
+      "bytes": 7299
+    },
+    {
+      "from": "patch/frontend/src/components/auth/AuthLayout.jsx",
+      "to": "frontend/src/components/auth/AuthLayout.jsx",
+      "operation": "replace",
+      "sha256": "0648f16b696eac46ec607946101886834876ee2d88d170eb3d5cbd60d458e953",
+      "bytes": 8287
+    },
+    {
+      "from": "patch/frontend/src/components/auth/OtpVerify.jsx",
+      "to": "frontend/src/components/auth/OtpVerify.jsx",
+      "operation": "replace",
+      "sha256": "2c92866c622f3da8dcd6c2257015a6ecbe272570bf485ddd313e579faf0ba258",
+      "bytes": 7995
+    },
+    {
+      "from": "patch/frontend/src/components/feed/IndividualFeed.jsx",
+      "to": "frontend/src/components/feed/IndividualFeed.jsx",
+      "operation": "replace",
+      "sha256": "9232de6d99f16b0a16e8f8284bc82db7c00ec77c7dc8adc53bcc419a84018e97",
+      "bytes": 20600
+    },
+    {
+      "from": "patch/frontend/src/components/interviews/TextInterview.jsx",
+      "to": "frontend/src/components/interviews/TextInterview.jsx",
+      "operation": "replace",
+      "sha256": "83c0d583c496709631a5d2ad133ac1111228a14e1459215728603b38801db9b9",
+      "bytes": 13729
+    },
+    {
+      "from": "patch/frontend/src/components/interviews/ThinkingDisplay.jsx",
+      "to": "frontend/src/components/interviews/ThinkingDisplay.jsx",
+      "operation": "replace",
+      "sha256": "5fe4f738c69b83bf69b4588b7156a07b1c3cc2648f19ccd1feb71954a972dc0f",
+      "bytes": 4542
+    },
+    {
+      "from": "patch/frontend/src/components/interviews/VideoRoom.jsx",
+      "to": "frontend/src/components/interviews/VideoRoom.jsx",
+      "operation": "replace",
+      "sha256": "3cb7cd796967df34912f03e5342a76414383682bcd5fb48123a802fd8cf3287e",
+      "bytes": 21831
+    },
+    {
+      "from": "patch/frontend/src/components/jobs/JobBits.jsx",
+      "to": "frontend/src/components/jobs/JobBits.jsx",
+      "operation": "replace",
+      "sha256": "6d477240bdeae3a120d04561de24197b54b549eb04f21e5f98b15c1983267dfb",
+      "bytes": 7486
+    },
+    {
+      "from": "patch/frontend/src/components/layout/AppShell.jsx",
+      "to": "frontend/src/components/layout/AppShell.jsx",
+      "operation": "replace",
+      "sha256": "96a14f8ef4d70d393baf4a9cdafd9683fff8e1314cc7485d61818243a864272e",
+      "bytes": 4830
+    },
+    {
+      "from": "patch/frontend/src/components/layout/OrgAppShell.jsx",
+      "to": "frontend/src/components/layout/OrgAppShell.jsx",
+      "operation": "replace",
+      "sha256": "1b39b16b2f2a34e86a13f406b8498fce3e68f32ab0ddc1fda4929e54751bff26",
+      "bytes": 8334
+    },
+    {
+      "from": "patch/frontend/src/components/layout/Sidebar.jsx",
+      "to": "frontend/src/components/layout/Sidebar.jsx",
+      "operation": "replace",
+      "sha256": "994ac319488a810ae5fcf861bc9e65638d4a60ce94b261e62659644b0f5b4bc8",
+      "bytes": 4486
+    },
+    {
+      "from": "patch/frontend/src/components/layout/UtilityRail.jsx",
+      "to": "frontend/src/components/layout/UtilityRail.jsx",
+      "operation": "replace",
+      "sha256": "780c1fa8210bf60c8c9117990200792c3016f447120319b2de37a01239b2246a",
+      "bytes": 5129
+    },
+    {
+      "from": "patch/frontend/src/components/motion/AnimatedTabBar.jsx",
+      "to": "frontend/src/components/motion/AnimatedTabBar.jsx",
+      "operation": "replace",
+      "sha256": "b53498b5b5b5da330ec26d162df9dc29dcb60e947a66cce338c0f0842da29749",
+      "bytes": 2724
+    },
+    {
+      "from": "patch/frontend/src/components/motion/ShimmerButton.jsx",
+      "to": "frontend/src/components/motion/ShimmerButton.jsx",
+      "operation": "replace",
+      "sha256": "2672131830fef4a6b11de57e3d859b02f6b2b973a9367237d54b7b51566932af",
+      "bytes": 1057
+    },
+    {
+      "from": "patch/frontend/src/components/motion/SmartSkeleton.jsx",
+      "to": "frontend/src/components/motion/SmartSkeleton.jsx",
+      "operation": "replace",
+      "sha256": "71b4d9fc50f7a8d207ad3802995c25a027e4e55bdc7f76564f3d50f103a4dbb7",
+      "bytes": 4249
+    },
+    {
+      "from": "patch/frontend/src/components/org/ApplicantCard.jsx",
+      "to": "frontend/src/components/org/ApplicantCard.jsx",
+      "operation": "replace",
+      "sha256": "4a2eea08be74a2430ed46ce78578be8ee4006d25a99645448830128fa3a49e90",
+      "bytes": 6595
+    },
+    {
+      "from": "patch/frontend/src/components/page/PageManagerLayout.jsx",
+      "to": "frontend/src/components/page/PageManagerLayout.jsx",
+      "operation": "replace",
+      "sha256": "0f09417362d7de0562061c0f5a270fe89a56323c1491d7a6ff3adf4e0d484ff7",
+      "bytes": 16772
+    },
+    {
+      "from": "patch/frontend/src/components/people/ApplicantActionRow.jsx",
+      "to": "frontend/src/components/people/ApplicantActionRow.jsx",
+      "operation": "replace",
+      "sha256": "45fcc36435151fa0058594027267f956fa648639b5723301f139eedce79ccbfb",
+      "bytes": 2619
+    },
+    {
+      "from": "patch/frontend/src/components/people/ApplicantsPanel.jsx",
+      "to": "frontend/src/components/people/ApplicantsPanel.jsx",
+      "operation": "replace",
+      "sha256": "f113f18979993956a8297134adeabebb9b48fb6b57d1d153b83adb761f580225",
+      "bytes": 3504
+    },
+    {
+      "from": "patch/frontend/src/components/people/PersonCard.jsx",
+      "to": "frontend/src/components/people/PersonCard.jsx",
+      "operation": "replace",
+      "sha256": "de126ce9096111ca545c0e62fa01ae80748c8c849cdedcb76b8467d159d26874",
+      "bytes": 2030
+    },
+    {
+      "from": "patch/frontend/src/components/people/peopleMeta.jsx",
+      "to": "frontend/src/components/people/peopleMeta.jsx",
+      "operation": "replace",
+      "sha256": "9c85c54a668d5fd3508c23f121c191286259b017792f53fcbeb18f3257c76ebd",
+      "bytes": 1780
+    },
+    {
+      "from": "patch/frontend/src/components/product/RecruAINavbar.js",
+      "to": "frontend/src/components/product/RecruAINavbar.js",
+      "operation": "replace",
+      "sha256": "06f74e6c218e77bd80aa7b7a3377504af3d148e280687f7f7ae2f150b6d2d50e",
+      "bytes": 8145
+    },
+    {
+      "from": "patch/frontend/src/components/profile/ProfileBits.jsx",
+      "to": "frontend/src/components/profile/ProfileBits.jsx",
+      "operation": "replace",
+      "sha256": "2767031501ecbc8a07de4167cb8c1e824c81b44d632d1c201d2ff6f126d098e1",
+      "bytes": 5765
+    },
+    {
+      "from": "patch/frontend/src/components/search/GlobalSearch.jsx",
+      "to": "frontend/src/components/search/GlobalSearch.jsx",
+      "operation": "replace",
+      "sha256": "9d0a4ed46ef1c83b3e68eaf6cab9cd7a4b209c67ef6ac0cd466bafebb16fa71a",
+      "bytes": 11325
+    },
+    {
+      "from": "patch/frontend/src/components/ui/Button.jsx",
+      "to": "frontend/src/components/ui/Button.jsx",
+      "operation": "replace",
+      "sha256": "7c262e8e06e39d0bdaf07f63634daf076d2105a010bfe383038f32a02d86e437",
+      "bytes": 2623
+    },
+    {
+      "from": "patch/frontend/src/components/ui/EmploymentStatus.jsx",
+      "to": "frontend/src/components/ui/EmploymentStatus.jsx",
+      "operation": "replace",
+      "sha256": "c8d4d70aea1fc58c1d6d3195df9bf48e521921142181fc8b08e9fe1a60e8a322",
+      "bytes": 2538
+    },
+    {
+      "from": "patch/frontend/src/components/ui/EmptyState.jsx",
+      "to": "frontend/src/components/ui/EmptyState.jsx",
+      "operation": "replace",
+      "sha256": "f7b91bb6b85cfc2ff4b70d09593aaa3f1bbcc57ed08ca384df2295c6fb9c2369",
+      "bytes": 1281
+    },
+    {
+      "from": "patch/frontend/src/components/ui/FollowButton.jsx",
+      "to": "frontend/src/components/ui/FollowButton.jsx",
+      "operation": "replace",
+      "sha256": "b3b3675d3f050a9972fc984b7797d324bc330843e06125ff454378b69d6fc90a",
+      "bytes": 2492
+    },
+    {
+      "from": "patch/frontend/src/components/ui/Input.jsx",
+      "to": "frontend/src/components/ui/Input.jsx",
+      "operation": "replace",
+      "sha256": "5c68c94118dd97f430b6a5b8e30fe2ca057c164d53307d0a8a3c8ec695001822",
+      "bytes": 643
+    },
+    {
+      "from": "patch/frontend/src/components/ui/PaymentMethods.jsx",
+      "to": "frontend/src/components/ui/PaymentMethods.jsx",
+      "operation": "replace",
+      "sha256": "cffb947dd68a258c6f376d934d0139811038e7596e3328454d58441afa235f87",
+      "bytes": 17797
+    },
+    {
+      "from": "patch/frontend/src/components/ui/PaywallModal.jsx",
+      "to": "frontend/src/components/ui/PaywallModal.jsx",
+      "operation": "replace",
+      "sha256": "f54119a993cff8f75d5b9fe73c690456d05868351dd49bfa3b55146ac1c123c3",
+      "bytes": 4225
+    },
+    {
+      "from": "patch/frontend/src/components/ui/PermissionDeniedModal.jsx",
+      "to": "frontend/src/components/ui/PermissionDeniedModal.jsx",
+      "operation": "replace",
+      "sha256": "08f32ceba3659916a4d33889a6d781736e83293b045b5dedb242ff83738c28c0",
+      "bytes": 1213
+    },
+    {
+      "from": "patch/frontend/src/components/ui/SignOutButton.jsx",
+      "to": "frontend/src/components/ui/SignOutButton.jsx",
+      "operation": "replace",
+      "sha256": "254aab903f4e618d97becd74be595addf77caafea044232f76d76be823afcc38",
+      "bytes": 3698
+    },
+    {
+      "from": "patch/frontend/src/components/ui/TimezoneSelector.jsx",
+      "to": "frontend/src/components/ui/TimezoneSelector.jsx",
+      "operation": "replace",
+      "sha256": "39f084c6dc0a5e57d1ccb1bca25d11c034385a57607383a6bad213df78187fb9",
+      "bytes": 5485
+    },
+    {
+      "from": "patch/frontend/src/index.css",
+      "to": "frontend/src/index.css",
+      "operation": "replace",
+      "sha256": "209e7583ab0036226ca26afd56eab2e543494e0f38e9fd850c3c7579be2b35d9",
+      "bytes": 5945
+    },
+    {
+      "from": "patch/frontend/src/pages/AboutUs.jsx",
+      "to": "frontend/src/pages/AboutUs.jsx",
+      "operation": "replace",
+      "sha256": "50f53cf6efce583b6968c32641855f0b2d242bbbe3e25087b434f442009ceba7",
+      "bytes": 13964
+    },
+    {
+      "from": "patch/frontend/src/pages/AcceptInvite.jsx",
+      "to": "frontend/src/pages/AcceptInvite.jsx",
+      "operation": "replace",
+      "sha256": "a9c7073b42c1075b0f4262b7acc39cb028e60b3906d2a6bd5800b74a572d4644",
+      "bytes": 20879
+    },
+    {
+      "from": "patch/frontend/src/pages/Blog.jsx",
+      "to": "frontend/src/pages/Blog.jsx",
+      "operation": "replace",
+      "sha256": "ed55fa1d2f19eadcd3efa6d2d2a15df0dcd1bc6fe3143f08bccb4154b8d1fd5e",
+      "bytes": 11493
+    },
+    {
+      "from": "patch/frontend/src/pages/Careers.js",
+      "to": "frontend/src/pages/Careers.js",
+      "operation": "replace",
+      "sha256": "0740f49c2d33a2052e78230a9329ac580be93ec3c9f9f650f336be3fd61a5d51",
+      "bytes": 12913
+    },
+    {
+      "from": "patch/frontend/src/pages/Community.jsx",
+      "to": "frontend/src/pages/Community.jsx",
+      "operation": "replace",
+      "sha256": "f9581c248f5c3575196b12cd1ba12541dba1c6e959b6a000bde2baabde1b604c",
+      "bytes": 13265
+    },
+    {
+      "from": "patch/frontend/src/pages/ContactUs.jsx",
+      "to": "frontend/src/pages/ContactUs.jsx",
+      "operation": "replace",
+      "sha256": "6083f618fedb89aef7dc99939f8e5fee15e65a9be8e2cfe7d75346e31d93e6a1",
+      "bytes": 13458
+    },
+    {
+      "from": "patch/frontend/src/pages/CookiesPolicy.jsx",
+      "to": "frontend/src/pages/CookiesPolicy.jsx",
+      "operation": "replace",
+      "sha256": "13a7b0ff6f1c596cb99b23e20a6dabe91469459691fe828092ab078d4cc20662",
+      "bytes": 16043
+    },
+    {
+      "from": "patch/frontend/src/pages/ForgotPassword.jsx",
+      "to": "frontend/src/pages/ForgotPassword.jsx",
+      "operation": "replace",
+      "sha256": "dcdd64d4521db373317df9272ad26aa021a538f5d26c26a0b70832dbbfdbd965",
+      "bytes": 8897
+    },
+    {
+      "from": "patch/frontend/src/pages/InterviewAnalysis.jsx",
+      "to": "frontend/src/pages/InterviewAnalysis.jsx",
+      "operation": "replace",
+      "sha256": "43c69288af4b7cd792585c6a72fe1dd5743af0a442eaaf3e0865ecb2502a5639",
+      "bytes": 25161
+    },
+    {
+      "from": "patch/frontend/src/pages/InterviewRoom.jsx",
+      "to": "frontend/src/pages/InterviewRoom.jsx",
+      "operation": "replace",
+      "sha256": "92b99f49808aeba3b123ea0212faf7ed6883dea3bde31617bd76444721942282",
+      "bytes": 21069
+    },
+    {
+      "from": "patch/frontend/src/pages/NotFound.jsx",
+      "to": "frontend/src/pages/NotFound.jsx",
+      "operation": "replace",
+      "sha256": "0a4c3e844289b3ecb064a20c8de09fb5768ee062c076e67098471e4a35475914",
+      "bytes": 5405
+    },
+    {
+      "from": "patch/frontend/src/pages/Notifications.jsx",
+      "to": "frontend/src/pages/Notifications.jsx",
+      "operation": "replace",
+      "sha256": "8b6eb2b302b0b092fdffab890d698c1a097b63eb6b0246250aacfdc7ab0e75b3",
+      "bytes": 19484
+    },
+    {
+      "from": "patch/frontend/src/pages/PrivacyPolicy.jsx",
+      "to": "frontend/src/pages/PrivacyPolicy.jsx",
+      "operation": "replace",
+      "sha256": "2ff660a6f984762e1f4b5ee4d90f3a3d32538604c4be57266870880648658271",
+      "bytes": 20337
+    },
+    {
+      "from": "patch/frontend/src/pages/PublicProfileBySlug.jsx",
+      "to": "frontend/src/pages/PublicProfileBySlug.jsx",
+      "operation": "replace",
+      "sha256": "769fd765a123cdcba0905afcb8bdc415107e4bcafdf00b2d590378564bbfa8d1",
+      "bytes": 23108
+    },
+    {
+      "from": "patch/frontend/src/pages/RecruAILanding.js",
+      "to": "frontend/src/pages/RecruAILanding.js",
+      "operation": "replace",
+      "sha256": "df65bb073db0356deee31878e9d6f5a8b03f7d377e21650f0b56a73ec64e39a3",
+      "bytes": 957
+    },
+    {
+      "from": "patch/frontend/src/pages/Register.js",
+      "to": "frontend/src/pages/Register.js",
+      "operation": "replace",
+      "sha256": "01cd459705721b52bf53a06bf3e681ae98a343ac041d2be9e30d1e0785c52ead",
+      "bytes": 15353
+    },
+    {
+      "from": "patch/frontend/src/pages/ResetPassword.jsx",
+      "to": "frontend/src/pages/ResetPassword.jsx",
+      "operation": "replace",
+      "sha256": "3b7108089e3c6ebe0db9f22fe19eef484effd2bf66463c93ead87e3791b68596",
+      "bytes": 11587
+    },
+    {
+      "from": "patch/frontend/src/pages/SearchResults.jsx",
+      "to": "frontend/src/pages/SearchResults.jsx",
+      "operation": "replace",
+      "sha256": "cba2cd9f78f1f64be327eb7ccbbf6b208c986e43e8b6c69fccca803d0c74b84e",
+      "bytes": 27312
+    },
+    {
+      "from": "patch/frontend/src/pages/SignIn.js",
+      "to": "frontend/src/pages/SignIn.js",
+      "operation": "replace",
+      "sha256": "6bd13986ef1ad989ed10e0fe9b005dfc94124010546c4b3cddf883c86e18a281",
+      "bytes": 14067
+    },
+    {
+      "from": "patch/frontend/src/pages/TermsAndConditions.jsx",
+      "to": "frontend/src/pages/TermsAndConditions.jsx",
+      "operation": "replace",
+      "sha256": "c1355e98f6201dbb02acad1c9e84fb4333f4309842561f800b1ed97f865eeffc",
+      "bytes": 17919
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiAuthoring.jsx",
+      "to": "frontend/src/pages/cvai/CvaiAuthoring.jsx",
+      "operation": "replace",
+      "sha256": "9c9a1bba4869f282f71896d5af25fd1cfcdc0bdc538ae6f3b76281bd35ef8532",
+      "bytes": 8058
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiInterviews.jsx",
+      "to": "frontend/src/pages/cvai/CvaiInterviews.jsx",
+      "operation": "replace",
+      "sha256": "3092b13f4de5917028d800f307208b4b3abcf7825aa5dd15da8aa974aa92502f",
+      "bytes": 31253
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiOverview.jsx",
+      "to": "frontend/src/pages/cvai/CvaiOverview.jsx",
+      "operation": "replace",
+      "sha256": "2b438caae9014786200a0d792de584606f1749f208ab34f0b8dc564d2e8b95e9",
+      "bytes": 26297
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiPlan.jsx",
+      "to": "frontend/src/pages/cvai/CvaiPlan.jsx",
+      "operation": "replace",
+      "sha256": "7fab38196d9cf4d050c28cd2711e6d8e831e5a0ef05647ab5e84731fe4e5dfe2",
+      "bytes": 17302
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiProjects.jsx",
+      "to": "frontend/src/pages/cvai/CvaiProjects.jsx",
+      "operation": "replace",
+      "sha256": "1db51b2224c8b2ea871750aa830ca8a43aae9d0322f95d56b342f38cfb2866c3",
+      "bytes": 21695
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiQuizzes.jsx",
+      "to": "frontend/src/pages/cvai/CvaiQuizzes.jsx",
+      "operation": "replace",
+      "sha256": "e4c23d0f39efa706f51f7a3a28de79857272af022e631c7f59d856b235c61cf9",
+      "bytes": 18003
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiShell.jsx",
+      "to": "frontend/src/pages/cvai/CvaiShell.jsx",
+      "operation": "replace",
+      "sha256": "cf7b20b5a76fd4161cad66f3bd37ae6e9051e23d61bb4129d86776aed1372c9c",
+      "bytes": 11234
+    },
+    {
+      "from": "patch/frontend/src/pages/cvai/CvaiSkills.jsx",
+      "to": "frontend/src/pages/cvai/CvaiSkills.jsx",
+      "operation": "replace",
+      "sha256": "cd1017053a825b4756f145749b9bea52be4d81c1a4c0f219e1ae49d33e33bcd4",
+      "bytes": 16967
+    },
+    {
+      "from": "patch/frontend/src/pages/dashboards/OrganizationDashboard.jsx",
+      "to": "frontend/src/pages/dashboards/OrganizationDashboard.jsx",
+      "operation": "replace",
+      "sha256": "059c20a41547b3029f9398f207bb45ab53c78ef71508842a30e3a9b700ca8b99",
+      "bytes": 33417
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/AIAgents.jsx",
+      "to": "frontend/src/pages/individual/AIAgents.jsx",
+      "operation": "replace",
+      "sha256": "6f851a30d5dae2d37c55daf9ee4ac7ca3a15ef9306fb96701539ec75a73d6fb6",
+      "bytes": 22507
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/Analytics.jsx",
+      "to": "frontend/src/pages/individual/Analytics.jsx",
+      "operation": "replace",
+      "sha256": "d1f64148ca274cb99c9ebaee3f03795a0906008ba2ce5a283251b67fa40e586a",
+      "bytes": 17752
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/InterviewDetail.jsx",
+      "to": "frontend/src/pages/individual/InterviewDetail.jsx",
+      "operation": "replace",
+      "sha256": "2970c74b60afb920f413ae7bb0a50619a9e04ffd2ffb4c6f2cb76dfee8247896",
+      "bytes": 41581
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/Interviews.jsx",
+      "to": "frontend/src/pages/individual/Interviews.jsx",
+      "operation": "replace",
+      "sha256": "b4e02bd2147ba6157851c864d942f98da9eb8462b3aa9008ede30d4e4024d14c",
+      "bytes": 16104
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/JobAlerts.jsx",
+      "to": "frontend/src/pages/individual/JobAlerts.jsx",
+      "operation": "replace",
+      "sha256": "c8e099bbb6345d343c5e891615b29d6eacf5dc59a59bbf020be5e5b7dbc21caf",
+      "bytes": 7130
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/JobDetails.jsx",
+      "to": "frontend/src/pages/individual/JobDetails.jsx",
+      "operation": "replace",
+      "sha256": "406a6bc6c1259da2eaa2557c304f9a008e79d174bc81d3d86cc1e1f545ebbb4f",
+      "bytes": 23004
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/Jobs.jsx",
+      "to": "frontend/src/pages/individual/Jobs.jsx",
+      "operation": "replace",
+      "sha256": "94b321d40a91671145b192276ca7f0b7f8d64103938939e1c03f803e6387070a",
+      "bytes": 19276
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/MyNetwork.jsx",
+      "to": "frontend/src/pages/individual/MyNetwork.jsx",
+      "operation": "replace",
+      "sha256": "a8521a05ee1c99859817e0ddfa86a01e92c200785db18de9faa64f36571ac135",
+      "bytes": 18791
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/PracticeDashboard.jsx",
+      "to": "frontend/src/pages/individual/PracticeDashboard.jsx",
+      "operation": "replace",
+      "sha256": "d90dfc16eb90fdb3a87cd82122f20d55b7f849df91aba22b2da7c462b09dbcc3",
+      "bytes": 18888
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/PracticeRoom.jsx",
+      "to": "frontend/src/pages/individual/PracticeRoom.jsx",
+      "operation": "replace",
+      "sha256": "2f31c9c49feb4924d53385bff044bab22bdb309c86d7147914dfb4cc1b5c5a62",
+      "bytes": 8560
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/Profile.jsx",
+      "to": "frontend/src/pages/individual/Profile.jsx",
+      "operation": "replace",
+      "sha256": "59e8f477853aac2a53339d7453427cf709bb08e8835d4b82e7f9e812b071ccd6",
+      "bytes": 31265
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/ResumeBuilder.jsx",
+      "to": "frontend/src/pages/individual/ResumeBuilder.jsx",
+      "operation": "replace",
+      "sha256": "566e3f902cc34885f250df47aae10691f8716c4d35d71b58999777306852b390",
+      "bytes": 9539
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/Settings.jsx",
+      "to": "frontend/src/pages/individual/Settings.jsx",
+      "operation": "replace",
+      "sha256": "828ef804a23685a05bce6e7ef1f9051ee7f221014052bbfd878e0440c2abc4de",
+      "bytes": 54093
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/ShareableProfiles.jsx",
+      "to": "frontend/src/pages/individual/ShareableProfiles.jsx",
+      "operation": "replace",
+      "sha256": "3f6715d99110172455b6fa1ad0856376b624d0ea92c0cc9de5fd00111d4771d1",
+      "bytes": 21135
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/AboutModal.jsx",
+      "to": "frontend/src/pages/individual/components/AboutModal.jsx",
+      "operation": "replace",
+      "sha256": "b6afd845082c1360763e171f73725dda03bdbc7ae11d6902203a790b0d898ae9",
+      "bytes": 1673
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/CompanySearchInput.jsx",
+      "to": "frontend/src/pages/individual/components/CompanySearchInput.jsx",
+      "operation": "replace",
+      "sha256": "aa81cec320a2e7d31c7fba4b2ee2d712c69b76f8e9e3e1096d7ec4bc5fced006",
+      "bytes": 4949
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/ItemModal.jsx",
+      "to": "frontend/src/pages/individual/components/ItemModal.jsx",
+      "operation": "replace",
+      "sha256": "6004b666c2aa9c8ee791b7026eb87f87ebd203913f450f592143198cbbe5480a",
+      "bytes": 10581
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/Modal.jsx",
+      "to": "frontend/src/pages/individual/components/Modal.jsx",
+      "operation": "replace",
+      "sha256": "a0bedb42a0a0bafaf53f593e43637d8f0e78c50cc7d6eb92d62f3372753bc7f0",
+      "bytes": 578
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/PersonalInfoModal.jsx",
+      "to": "frontend/src/pages/individual/components/PersonalInfoModal.jsx",
+      "operation": "replace",
+      "sha256": "cbcb7bd77d50483749473d0d6bb047ad1f48de0ee1a035a1bcb4acd0cae0b97c",
+      "bytes": 4788
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/ProfileBanner.jsx",
+      "to": "frontend/src/pages/individual/components/ProfileBanner.jsx",
+      "operation": "replace",
+      "sha256": "f298f30dccdca4417292880fe17c04d39b67fdfc975449863ccf5d6abcfa9460",
+      "bytes": 1611
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/ProfileTabs.jsx",
+      "to": "frontend/src/pages/individual/components/ProfileTabs.jsx",
+      "operation": "replace",
+      "sha256": "3ef8bff36b6d7f9b905fc90b112f244d5a58c228cccec91b15a9f7e39b5106c2",
+      "bytes": 4140
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/SectionHeader.jsx",
+      "to": "frontend/src/pages/individual/components/SectionHeader.jsx",
+      "operation": "replace",
+      "sha256": "1e8b3bd5030a5f88fbd8a1dcc780ab4780418ee81c1208be395a6b7ae5fe81b2",
+      "bytes": 695
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/AchievementsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/AchievementsSection.jsx",
+      "operation": "replace",
+      "sha256": "0b9521ad6e2c1a643517db3ff1cc04c4e0b134491666ce5ec547e51c22ea7438",
+      "bytes": 1720
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/AwardsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/AwardsSection.jsx",
+      "operation": "replace",
+      "sha256": "ffa3ce48c2e4f603ed7b28733b786722e530b50f16a7506953ff52eced0a6186",
+      "bytes": 1605
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/CertificationsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/CertificationsSection.jsx",
+      "operation": "replace",
+      "sha256": "0dd67af988644e6597023e9997ad2ea2e12d78f75d5ab829f878370a82ffd935",
+      "bytes": 1860
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/ConferencesSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/ConferencesSection.jsx",
+      "operation": "replace",
+      "sha256": "3dd3a61854e95b93d5061e3a9f46bf4b3f777e1febe4af433ba93b092abbb229",
+      "bytes": 1768
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/CoursesSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/CoursesSection.jsx",
+      "operation": "replace",
+      "sha256": "5e7757ccb3ccb2f4f1ef16373617564bcea677d0a63ba380b46ff0489ee24fec",
+      "bytes": 1779
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/EducationSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/EducationSection.jsx",
+      "operation": "replace",
+      "sha256": "c6591f395ee9f6553aafb6df29dfe3b22498e30c8336aa207e740da3e4f854c8",
+      "bytes": 2301
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/ExperienceSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/ExperienceSection.jsx",
+      "operation": "replace",
+      "sha256": "390a100e8f8483f0c483f0cb426b4ca0c8264162611621e7f79e67723cd1f264",
+      "bytes": 3206
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/HobbiesSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/HobbiesSection.jsx",
+      "operation": "replace",
+      "sha256": "dac9cb5d6981eb7ea2b4c57d2ca0790977c5aae726d03a3bef963a6aa2e451c2",
+      "bytes": 1104
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/LicensesSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/LicensesSection.jsx",
+      "operation": "replace",
+      "sha256": "2112e168549dc4371e4c8fbd017ed43c7853d7bb73f78c430e87e697770e84f8",
+      "bytes": 2072
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/MembershipsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/MembershipsSection.jsx",
+      "operation": "replace",
+      "sha256": "7e24c106324b1fbd80ae85a568711960124e6efe7f3dd48122a900865e5cdab8",
+      "bytes": 2067
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/PatentsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/PatentsSection.jsx",
+      "operation": "replace",
+      "sha256": "ee2ffe1cb5d6b37d2d45ff2ba9cdd079a6fc60d96324cda0948896d7af93d3b0",
+      "bytes": 1913
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/ProjectsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/ProjectsSection.jsx",
+      "operation": "replace",
+      "sha256": "6981acc6c98abddae4df549180764ea9271dbbc6dff18fe40665585c06b9f7f9",
+      "bytes": 2017
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/PublicationsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/PublicationsSection.jsx",
+      "operation": "replace",
+      "sha256": "8f851ab708a9a1b04fe58eb51db229077fa574b970af87946e9a1e589e57fb5f",
+      "bytes": 1541
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/ReferencesSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/ReferencesSection.jsx",
+      "operation": "replace",
+      "sha256": "3603f1a8ac70732405d8b97f6eb2d8b11662dd9b6d5cbf2df24d3fbbbe947c28",
+      "bytes": 1591
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/SkillsSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/SkillsSection.jsx",
+      "operation": "replace",
+      "sha256": "9c2144d0e8583dd3eae700035a7fc6eeb2bd321d482f92a5affe1e6c51ab2ba2",
+      "bytes": 1747
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/SocialSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/SocialSection.jsx",
+      "operation": "replace",
+      "sha256": "b36ecd8636981774c850ac0180b32bb29b8b3541fd991dfb4497142986da3101",
+      "bytes": 1817
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/SpeakingSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/SpeakingSection.jsx",
+      "operation": "replace",
+      "sha256": "6c749c371685b91434b497cd4516513b4d913ef517350016fdca4f1fa4bd6dfd",
+      "bytes": 1950
+    },
+    {
+      "from": "patch/frontend/src/pages/individual/components/sections/VolunteerSection.jsx",
+      "to": "frontend/src/pages/individual/components/sections/VolunteerSection.jsx",
+      "operation": "replace",
+      "sha256": "8af10fa52cfa958512df4216e4c2dfee689d4568d3037de31f0c5485a8bad8cf",
+      "bytes": 1653
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/AIAgents.jsx",
+      "to": "frontend/src/pages/organization/AIAgents.jsx",
+      "operation": "replace",
+      "sha256": "5feaf497430dcd627f2ba613cbf75ab95199d7fac536bac056829c59c28a235c",
+      "bytes": 18414
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Billing.jsx",
+      "to": "frontend/src/pages/organization/Billing.jsx",
+      "operation": "replace",
+      "sha256": "37de29458f02e472a5054838629ba2bb4420cf913e0190bddcb9fb23b3f0c4da",
+      "bytes": 15435
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/BrowseOrganizations.jsx",
+      "to": "frontend/src/pages/organization/BrowseOrganizations.jsx",
+      "operation": "replace",
+      "sha256": "cdb3760fae6b86ce09decee2ad03ae14a4f80e97ac1b87607e39b5dbc4e14e62",
+      "bytes": 7975
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/CandidateAnalysis.jsx",
+      "to": "frontend/src/pages/organization/CandidateAnalysis.jsx",
+      "operation": "replace",
+      "sha256": "ab522c88c5a1aded80d843ab8f88d4a347ec3406750933a5fbfa65fe6fce68c1",
+      "bytes": 26063
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Candidates.jsx",
+      "to": "frontend/src/pages/organization/Candidates.jsx",
+      "operation": "replace",
+      "sha256": "2492069a7592d16ca11664d1df5be4293e409e45c0bce424737be6e89ad0fcfb",
+      "bytes": 29467
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/HirePeople.jsx",
+      "to": "frontend/src/pages/organization/HirePeople.jsx",
+      "operation": "replace",
+      "sha256": "ddd3c5da24f7109acf3c2698c5de2980c2200c86282569f70066064beba7cec7",
+      "bytes": 31822
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Insights.jsx",
+      "to": "frontend/src/pages/organization/Insights.jsx",
+      "operation": "replace",
+      "sha256": "c59bdd4587d2591ebb6052ef85cdce37cb1f452382e3e8e8384286681bb6ea65",
+      "bytes": 14816
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Integrations.jsx",
+      "to": "frontend/src/pages/organization/Integrations.jsx",
+      "operation": "replace",
+      "sha256": "510b8fd2a1b927a68fa87ac3d04bb0fac2caaca6d685b376231a27657fc0ae3b",
+      "bytes": 12911
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/InterviewManagement.jsx",
+      "to": "frontend/src/pages/organization/InterviewManagement.jsx",
+      "operation": "replace",
+      "sha256": "43e677befe482269e3611ed802ce6ff297fbeb1545255e2465ab1b1cfd7d8818",
+      "bytes": 88358
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/JobPostDetails.jsx",
+      "to": "frontend/src/pages/organization/JobPostDetails.jsx",
+      "operation": "replace",
+      "sha256": "8360665549f75ac08436d14251408353edc49f802033564b282f30102ce59de0",
+      "bytes": 18126
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/JobPosts.jsx",
+      "to": "frontend/src/pages/organization/JobPosts.jsx",
+      "operation": "replace",
+      "sha256": "b570fa0cbe19154c2db314f190ec5e600d91ea5dfeac79ed97d28cdba6bce5b0",
+      "bytes": 35247
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/OrganizationAnalytics.jsx",
+      "to": "frontend/src/pages/organization/OrganizationAnalytics.jsx",
+      "operation": "replace",
+      "sha256": "794245bc7edd5c1c1a0a25858a88bdd4b4c9dd7ccfd959b38d9cbd3aa3839ae0",
+      "bytes": 17233
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Pipeline.jsx",
+      "to": "frontend/src/pages/organization/Pipeline.jsx",
+      "operation": "replace",
+      "sha256": "7390cee3b34095de520a78fd6150e67cc41899c8c3e3b8f3b108405a9d155abe",
+      "bytes": 19419
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Profile.jsx",
+      "to": "frontend/src/pages/organization/Profile.jsx",
+      "operation": "replace",
+      "sha256": "26cc4a785ccac4ce8d84ca210de7a9dce8ff3d780ef491d25990cc28a8e38173",
+      "bytes": 44464
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Reports.jsx",
+      "to": "frontend/src/pages/organization/Reports.jsx",
+      "operation": "replace",
+      "sha256": "7b8bfd789e26e4a16acbdece9b7b2213b9c73efbdf36f4b9a090e06683b4377a",
+      "bytes": 13513
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/Settings.jsx",
+      "to": "frontend/src/pages/organization/Settings.jsx",
+      "operation": "replace",
+      "sha256": "74a3d8b93bd0a6cbfb4efb494bb24a05c9c45a1408cad36fc746d11e4a793a7a",
+      "bytes": 40137
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/TeamMembers.jsx",
+      "to": "frontend/src/pages/organization/TeamMembers.jsx",
+      "operation": "replace",
+      "sha256": "0a7483a8e9bdbb0b9ed294f5531357c4d6cd13aeaa16312981f6ab446beb2321",
+      "bytes": 25656
+    },
+    {
+      "from": "patch/frontend/src/pages/organization/UserProfile.jsx",
+      "to": "frontend/src/pages/organization/UserProfile.jsx",
+      "operation": "replace",
+      "sha256": "51a54ab07836975f9a3622e186fa4a362fa51baa66d595961db5dea065977d0c",
+      "bytes": 17463
+    },
+    {
+      "from": "patch/frontend/src/pages/page/CreatePage.jsx",
+      "to": "frontend/src/pages/page/CreatePage.jsx",
+      "operation": "replace",
+      "sha256": "850a0206efd7796441107c5981c7e0bf4c59f48fd747fec3280ff1e01c68cceb",
+      "bytes": 34407
+    },
+    {
+      "from": "patch/frontend/src/pages/page/Overview.jsx",
+      "to": "frontend/src/pages/page/Overview.jsx",
+      "operation": "replace",
+      "sha256": "46119050921c44d2ca48caace6a5870e2c2eb67870fca83c99f29a8a2e23744f",
+      "bytes": 13348
+    },
+    {
+      "from": "patch/frontend/src/pages/page/PageProfile.jsx",
+      "to": "frontend/src/pages/page/PageProfile.jsx",
+      "operation": "replace",
+      "sha256": "e1eca8cab0d1f5faa36168d1e66016113b179d3c7846459610732ccb90981266",
+      "bytes": 23779
+    },
+    {
+      "from": "patch/frontend/src/pages/page/Settings.jsx",
+      "to": "frontend/src/pages/page/Settings.jsx",
+      "operation": "replace",
+      "sha256": "7e7e01dc8ad30ba8f55bbb2ed67d610b437d93ae3342efe336b0e5a7ff929683",
+      "bytes": 7621
+    },
+    {
+      "from": "patch/frontend/src/pages/page/Visibility.jsx",
+      "to": "frontend/src/pages/page/Visibility.jsx",
+      "operation": "replace",
+      "sha256": "aab42818e215bdbadd724b5497e68d202c2bedb68ac1fac7f09406c28f3fa121",
+      "bytes": 10423
+    },
+    {
+      "from": "patch/frontend/src/setupTests.js",
+      "to": "frontend/src/setupTests.js",
+      "operation": "replace",
+      "sha256": "306eec052b9ba2760b2736986ac8ab8e41c33dd6ad718f749931ca960e72ac4b",
+      "bytes": 1088
+    },
+    {
+      "from": "patch/frontend/src/utils/cvai.js",
+      "to": "frontend/src/utils/cvai.js",
+      "operation": "replace",
+      "sha256": "7a20e6ec7e8bc7d92c1c35f9c7f8e9980c2bd16487ab87fa29b9301ab76ac909",
+      "bytes": 8582
+    },
+    {
+      "from": "patch/frontend/src/components/layout/navStyles.js",
+      "to": "frontend/src/components/layout/navStyles.js",
+      "operation": "create",
+      "sha256": "97e8e54c7be74e2f25bd65dcf4cb22a83ab2e74b6a6d082252fc2cef4f691a7b",
+      "bytes": 1064
+    },
+    {
+      "from": "patch/frontend/src/components/jobs/JobCard.jsx",
+      "to": "frontend/src/components/jobs/JobCard.jsx",
+      "operation": "create",
+      "sha256": "e7ad958a5d53a6092e1c047a202f73fdbbc1cb025e5c654132351eff4bf08631",
+      "bytes": 6656
+    },
+    {
+      "from": "patch/frontend/src/stageshow/stageshow.css",
+      "to": "frontend/src/stageshow/stageshow.css",
+      "operation": "create",
+      "sha256": "d9199b34d160c6acca173ca73a1f7e692ec45773b4cba8cc12b423eed501337b",
+      "bytes": 1398
+    },
+    {
+      "from": "patch/frontend/src/stageshow/stage.css",
+      "to": "frontend/src/stageshow/stage.css",
+      "operation": "create",
+      "sha256": "8d2d41c674ef96d215823bb311a6b78149b014970c5e92f5b05ceea597ebc7a4",
+      "bytes": 19740
+    },
+    {
+      "from": "patch/frontend/src/stageshow/keys.css",
+      "to": "frontend/src/stageshow/keys.css",
+      "operation": "create",
+      "sha256": "abd45486c23cd87b36c4223e6191bb28bd6d63eea2b1e59119e8638cbc5c9f35",
+      "bytes": 1513
+    },
+    {
+      "from": "patch/frontend/src/stageshow/cursor.css",
+      "to": "frontend/src/stageshow/cursor.css",
+      "operation": "create",
+      "sha256": "04dd8b56ea2afccab89ff31ee8f71883ba919adbc9b98588bfe116a8259be044",
+      "bytes": 8559
+    },
+    {
+      "from": "patch/frontend/src/stageshow/window.css",
+      "to": "frontend/src/stageshow/window.css",
+      "operation": "create",
+      "sha256": "dff7280c631f19d1f1adc779215056357d7c535f3fec725e4fdbc825ca018b93",
+      "bytes": 16098
+    },
+    {
+      "from": "patch/frontend/src/stageshow/phone.css",
+      "to": "frontend/src/stageshow/phone.css",
+      "operation": "create",
+      "sha256": "acf974825abbac3e58a0bf4add9344ff044a1cc923c3986b8b4f39c2d64ba9fe",
+      "bytes": 16159
+    },
+    {
+      "from": "patch/frontend/src/stageshow/ios.css",
+      "to": "frontend/src/stageshow/ios.css",
+      "operation": "create",
+      "sha256": "a7806e8e6ac1322d1e5d5a7b476abf476034aaf4d855466ba39a708db2a83eb0",
+      "bytes": 4448
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Roll.css",
+      "to": "frontend/src/stageshow/motion/Roll.css",
+      "operation": "create",
+      "sha256": "304d5ff9b84cd61834d21946afbac12a97bcae73439bf0f05bbcacc8c93e910f",
+      "bytes": 2864
+    },
+    {
+      "from": "patch/frontend/src/stageshow/messages.css",
+      "to": "frontend/src/stageshow/messages.css",
+      "operation": "create",
+      "sha256": "1e0ad3422310796369602136033c5b66e9740d8f11d4ce2e27fb588974ac7ceb",
+      "bytes": 12864
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Connector.css",
+      "to": "frontend/src/stageshow/motion/Connector.css",
+      "operation": "create",
+      "sha256": "8c78bad52c194812b4869fd8ada4c3a4513292e9d5f80b41c45835c492033a03",
+      "bytes": 3147
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Count.css",
+      "to": "frontend/src/stageshow/motion/Count.css",
+      "operation": "create",
+      "sha256": "b9ad59c5245d0e798ac8d44c9a6e8358bf3758d438adbfc8ffa108baf306f55d",
+      "bytes": 2068
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Swap.css",
+      "to": "frontend/src/stageshow/motion/Swap.css",
+      "operation": "create",
+      "sha256": "fefd67473274a7323bb3b898c8ab924abbee599b10d336610e39b65a5d7582bb",
+      "bytes": 1357
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Collapse.css",
+      "to": "frontend/src/stageshow/motion/Collapse.css",
+      "operation": "create",
+      "sha256": "b77ed42db829147e1be017f6825f0cbff7b8bbbefead84c9df0651a8740b7f9b",
+      "bytes": 4229
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Fly.css",
+      "to": "frontend/src/stageshow/motion/Fly.css",
+      "operation": "create",
+      "sha256": "9bdcb3d8f0f4c8b5e5d070dc517f62517c2f84f4cca6f32b1b9d79ce29f085d0",
+      "bytes": 1346
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Follow.css",
+      "to": "frontend/src/stageshow/motion/Follow.css",
+      "operation": "create",
+      "sha256": "e5180799838937c9862a49a5fedebe7c36bcc338db240ccdd107fcee8bfe8cd9",
+      "bytes": 273
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/States.css",
+      "to": "frontend/src/stageshow/motion/States.css",
+      "operation": "create",
+      "sha256": "7562e612e504045cb093b259ed3535d733ec813f7e495e80f4914a2d36b28ace",
+      "bytes": 1775
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Stream.css",
+      "to": "frontend/src/stageshow/motion/Stream.css",
+      "operation": "create",
+      "sha256": "cc1c107980642ebe207906c742e1f6d085f949b004259d31422ca9059a5a6db1",
+      "bytes": 697
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Popover.css",
+      "to": "frontend/src/stageshow/motion/Popover.css",
+      "operation": "create",
+      "sha256": "61c8b769dcd55914b5e7430e74c662c3885781f46afd62c35f1428c01445b550",
+      "bytes": 2397
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Camera.css",
+      "to": "frontend/src/stageshow/motion/Camera.css",
+      "operation": "create",
+      "sha256": "5f86c6e24e67bff6ac67bfaa52607668a6a4c8bb52076015a03f4f90a4699830",
+      "bytes": 745
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Scroll.css",
+      "to": "frontend/src/stageshow/motion/Scroll.css",
+      "operation": "create",
+      "sha256": "f0d8e739b2cb2df292265d4f98008609afa4996f48d7df780bc3eb08b2e3153c",
+      "bytes": 1187
+    },
+    {
+      "from": "patch/frontend/src/stageshow/motion/Expand.css",
+      "to": "frontend/src/stageshow/motion/Expand.css",
+      "operation": "create",
+      "sha256": "b7f6ecddd4c4ab350c14e55310f2c595444d78a28081e8fc36be3fef7c5dc12b",
+      "bytes": 2919
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Avatar.css",
+      "to": "frontend/src/stageshow/parts/Avatar.css",
+      "operation": "create",
+      "sha256": "47fe0decdf364067f07dbbb5212b386442e84f374d0786fbd14f9266414f67c3",
+      "bytes": 3210
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Check.css",
+      "to": "frontend/src/stageshow/parts/Check.css",
+      "operation": "create",
+      "sha256": "3f53b3a499d27ee6d356564edc0b94a2d0af8d81594fdaa13a91ed8d432f8ef1",
+      "bytes": 2311
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Icon.css",
+      "to": "frontend/src/stageshow/parts/Icon.css",
+      "operation": "create",
+      "sha256": "d84574d85a41383da2f121e62b8a8803b6af6a46461d639a9c68d0d52650614f",
+      "bytes": 98
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Spinner.css",
+      "to": "frontend/src/stageshow/parts/Spinner.css",
+      "operation": "create",
+      "sha256": "3f87620d2754180eb38a1f65374f11a37f452029d45f980a704331e25abbe863",
+      "bytes": 215
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Toast.css",
+      "to": "frontend/src/stageshow/parts/Toast.css",
+      "operation": "create",
+      "sha256": "42596e56d54c2a92b0b2a4f5c1e58473d0dec9d11c3b2fb350741fca1fa0a901",
+      "bytes": 1190
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Meter.css",
+      "to": "frontend/src/stageshow/parts/Meter.css",
+      "operation": "create",
+      "sha256": "dae01d5098bf9fc1d49751007484c7b11f8c2b72743d25689a0358750f04bd20",
+      "bytes": 1255
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Menu.css",
+      "to": "frontend/src/stageshow/parts/Menu.css",
+      "operation": "create",
+      "sha256": "3dbacafc0f10b229ed535aef0c5c0fe2a2cc7e911179e5ad97140bfbbfa640f5",
+      "bytes": 733
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Facepile.css",
+      "to": "frontend/src/stageshow/parts/Facepile.css",
+      "operation": "create",
+      "sha256": "04d47d242220566ec47a03461577a8f8b28bca2d520c5936449569a0766eb376",
+      "bytes": 345
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/Chip.css",
+      "to": "frontend/src/stageshow/parts/Chip.css",
+      "operation": "create",
+      "sha256": "b657b3d3a2a36290d5426bc5922498c2b28a6fb29e30c7a6921f507d7da402cb",
+      "bytes": 1875
+    },
+    {
+      "from": "patch/frontend/src/stageshow/parts/BrandMark.css",
+      "to": "frontend/src/stageshow/parts/BrandMark.css",
+      "operation": "create",
+      "sha256": "c6100ff508b4386625f7c852a051b2d2d0be394aa1baccd98505b276b0d91232",
+      "bytes": 895
+    },
+    {
+      "from": "patch/frontend/src/stageshow/controls/Field.css",
+      "to": "frontend/src/stageshow/controls/Field.css",
+      "operation": "create",
+      "sha256": "f6fc521c9bd0e6053b38602227d8450aa721a0b25abaaecf09f4d3152ead5e88",
+      "bytes": 5638
+    },
+    {
+      "from": "patch/frontend/src/stageshow/controls/Segmented.css",
+      "to": "frontend/src/stageshow/controls/Segmented.css",
+      "operation": "create",
+      "sha256": "f40796f036d2d3b909f4daf173bffa62831f0bfab7499910aafdf23de233fcf1",
+      "bytes": 943
+    },
+    {
+      "from": "patch/frontend/src/stageshow/controls/Toggle.css",
+      "to": "frontend/src/stageshow/controls/Toggle.css",
+      "operation": "create",
+      "sha256": "0526b52a9e8a9d54b43f9ad914c43e75ca0ca6be09f70447e79e8f9477110251",
+      "bytes": 1197
+    },
+    {
+      "from": "patch/frontend/src/stageshow/controls/Tabs.css",
+      "to": "frontend/src/stageshow/controls/Tabs.css",
+      "operation": "create",
+      "sha256": "9e0de30e4f3c49463e20873b39b5bee9cb619788738820e0851273ef235bff40",
+      "bytes": 646
+    },
+    {
+      "from": "patch/frontend/src/stageshow/controls/Badge.css",
+      "to": "frontend/src/stageshow/controls/Badge.css",
+      "operation": "create",
+      "sha256": "a4d6641984197011e4474a9455f8ea9cc4ab540ebf0c0bc8ba33a86c7d9787ad",
+      "bytes": 1854
+    },
+    {
+      "from": "patch/frontend/src/stageshow/controls/Slot.css",
+      "to": "frontend/src/stageshow/controls/Slot.css",
+      "operation": "create",
+      "sha256": "3160662820ccda14d846735e53fa533b5e761d63dc89600e326024378d776b2f",
+      "bytes": 1053
+    },
+    {
+      "from": "patch/frontend/src/stageshow/code.css",
+      "to": "frontend/src/stageshow/code.css",
+      "operation": "create",
+      "sha256": "e8e773604d94800f62dc5f8291fa13640f378079b70f90b6de52cccfd83aee91",
+      "bytes": 2398
+    },
+    {
+      "from": "patch/frontend/src/stageshow/chart.css",
+      "to": "frontend/src/stageshow/chart.css",
+      "operation": "create",
+      "sha256": "b0801770ea68b92ae8e86ee0d4a763824d63bdb22336d9a322a1be6844095de7",
+      "bytes": 1505
+    },
+    {
+      "from": "patch/SYSTEM.md",
+      "to": "SYSTEM.md",
+      "operation": "create",
+      "sha256": "f0e0b194642e0e7f3c42b221d85fa4a2fc18f7252e91c14544f12bb929f74a53",
+      "bytes": 14123
+    }
+  ],
+  "delete": [
+    "frontend/public/mentee-logo.svg",
+    "frontend/src/App.css",
+    "frontend/src/components/RoleProtectedRoute.js",
+    "frontend/src/components/TeamMemberProfile.jsx",
+    "frontend/src/components/layout/DashboardFooter.jsx",
+    "frontend/src/components/layout/DashboardLayout.jsx",
+    "frontend/src/components/layout/Footer.jsx",
+    "frontend/src/components/layout/Header.jsx",
+    "frontend/src/components/layout/IndividualNavbar.jsx",
+    "frontend/src/components/layout/OrganizationNavbar.jsx",
+    "frontend/src/components/ui/Card.jsx",
+    "frontend/src/components/ui/Chip.jsx",
+    "frontend/src/components/ui/RecommendationCard.jsx",
+    "frontend/src/components/ui/Segmented.jsx",
+    "frontend/src/components/ui/StatCard.jsx",
+    "frontend/src/components/ui/Tabs.jsx",
+    "frontend/src/logo.svg",
+    "frontend/src/pages/Dashboard.jsx",
+    "frontend/src/pages/PublicProfile.jsx",
+    "frontend/src/pages/dashboards/IndividualDashboard.jsx",
+    "frontend/src/pages/individual/AppliedJobs.jsx",
+    "frontend/src/pages/individual/InterviewHistory.jsx",
+    "frontend/src/pages/individual/SavedJobs.jsx",
+    "frontend/src/pages/individual/UpcomingInterviews.jsx",
+    "frontend/src/utils/performance.js"
+  ],
+  "excluded": [
+    {
+      "path": "frontend/src/pages/SystemStatus.jsx",
+      "reason": "protected file"
+    },
+    {
+      "path": "admin/src/index.css",
+      "reason": "protected: admin/Superadmin styling change"
+    },
+    {
+      "path": "frontend/scripts/visual-check-key.cjs",
+      "reason": "contains demo credentials; not part of handover"
+    },
+    {
+      "path": "frontend/scripts/visual-sweep.cjs",
+      "reason": "contains demo credentials; not part of handover"
+    },
+    {
+      "path": "frontend/scripts/visual-verify.cjs",
+      "reason": "optional verification tooling; not required to build"
+    },
+    {
+      "path": "frontend/scripts/visual-assert.cjs",
+      "reason": "optional verification tooling; not required to build"
+    },
+    {
+      "path": "frontend/e2e/stageshow-craft.spec.js",
+      "reason": "optional e2e test; not required to build"
+    },
+    {
+      "path": ".gitignore",
+      "reason": "shared tooling config; review separately"
+    },
+    {
+      "path": "skills-lock.json",
+      "reason": "tooling lockfile; not frontend runtime"
+    },
+    {
+      "path": ".commandcode/taste/design/taste.md",
+      "reason": "tooling state"
+    },
+    {
+      "path": ".posit/",
+      "reason": "duplicate installed skill tree"
+    },
+    {
+      "path": ".tabnine/",
+      "reason": "duplicate installed skill tree"
+    },
+    {
+      "path": "agent/",
+      "reason": "duplicate installed skill tree"
+    },
+    {
+      "path": "skills/",
+      "reason": "duplicate installed skill tree"
+    },
+    {
+      "path": "frontend/qa-shots-alignment/",
+      "reason": "generated visual evidence"
+    },
+    {
+      "path": "frontend/qa-shots-unification/",
+      "reason": "generated visual evidence"
+    },
+    {
+      "path": "qa-evidence/",
+      "reason": "generated audit evidence"
+    },
+    {
+      "path": "visual-audit/",
+      "reason": "generated audit evidence"
+    },
+    {
+      "path": "repository-review/",
+      "reason": "audit reports only"
+    },
+    {
+      "path": "$null",
+      "reason": "deleted 0-byte junk; not frontend"
+    },
+    {
+      "path": "(a.getAttribute('aria-label')",
+      "reason": "deleted 0-byte junk; not frontend"
+    }
+  ],
+  "verification": {
+    "relative_imports_missing": 0,
+    "css_imports_missing": 0,
+    "package_lock_dependency_diff": {
+      "missingFromLock": [],
+      "extraInLock": []
+    },
+    "protected_system_status_included": false,
+    "admin_css_included": false,
+    "credential_scripts_included": false,
+    "stageshow_css_files": 39
+  }
+}

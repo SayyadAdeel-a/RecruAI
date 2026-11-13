@@ -1,0 +1,6 @@
+1. Copy patch/frontend/** over frontend/** (preserve paths).
+2. Copy patch/SYSTEM.md to SYSTEM.md.
+3. Delete every path in patch/DELETIONS.txt.
+4. Do not copy admin/src/index.css, frontend/src/pages/SystemStatus.jsx, scripts, or tooling directories.
+5. Run npm ci, npm run build, npm run test:ci (expect 40/42 known failures).
+6. Run authenticated visual QA per AUTHENTICATED_VISUAL_QA_BACKLOG.md.

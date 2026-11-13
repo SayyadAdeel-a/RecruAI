@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-11-13T15:10:01.046Z",
+  "branch": "adeeldev",
+  "head": "47f2cd01c0a15f91ff9bafb18ecfcd26180ddcea",
+  "commits_ahead_of_underdev": [
+    "47f2cd0 2026-11-13 10:23:47 +0500 feat: add admin dashboard components and project audit reports"
+  ],
+  "status_counts": {
+    "D": 27,
+    "M": 147,
+    "??": 64
+  },
+  "protected_sha256": {
+    "frontend/src/pages/SystemStatus.jsx": "557b9ff4570d2b6d73bdcaa6c50d6599987e2b649904f9951052fe61a61fbdfc",
+    "admin/src/index.css": "d9d4fc0baa5c99abf97a0a6265a7cf7abdf0d0cec340b11ae1d9ae0d47535665"
+  },
+  "copied_files": 184,
+  "required_additions": 41,
+  "deletions": 25
+}

@@ -1,0 +1,166 @@
+ M frontend/package-lock.json
+ M frontend/package.json
+ M frontend/public/index.html
+ D frontend/public/mentee-logo.svg
+ D frontend/src/App.css
+ M frontend/src/App.js
+ M frontend/src/components/CTA.js
+ M frontend/src/components/CustomerSegments.js
+ M frontend/src/components/FeaturedJobs.js
+ M frontend/src/components/Features.js
+ M frontend/src/components/Footer.js
+ M frontend/src/components/Hero.js
+ M frontend/src/components/HowItWorks.js
+ M frontend/src/components/Pricing.js
+ D frontend/src/components/RoleProtectedRoute.js
+ D frontend/src/components/TeamMemberProfile.jsx
+ M frontend/src/components/Testimonials.js
+ M frontend/src/components/auth/AuthLayout.jsx
+ M frontend/src/components/auth/OtpVerify.jsx
+ M frontend/src/components/interviews/TextInterview.jsx
+ M frontend/src/components/interviews/ThinkingDisplay.jsx
+ M frontend/src/components/interviews/VideoRoom.jsx
+ D frontend/src/components/layout/DashboardFooter.jsx
+ D frontend/src/components/layout/DashboardLayout.jsx
+ D frontend/src/components/layout/Footer.jsx
+ D frontend/src/components/layout/Header.jsx
+ D frontend/src/components/layout/IndividualNavbar.jsx
+ D frontend/src/components/layout/OrganizationNavbar.jsx
+ M frontend/src/components/org/ApplicantCard.jsx
+ M frontend/src/components/page/PageManagerLayout.jsx
+ M frontend/src/components/people/ApplicantActionRow.jsx
+ M frontend/src/components/people/ApplicantsPanel.jsx
+ M frontend/src/components/people/PersonCard.jsx
+ M frontend/src/components/people/peopleMeta.jsx
+ M frontend/src/components/product/RecruAINavbar.js
+ M frontend/src/components/search/GlobalSearch.jsx
+ D frontend/src/components/ui/Card.jsx
+ D frontend/src/components/ui/Chip.jsx
+ M frontend/src/components/ui/EmploymentStatus.jsx
+ M frontend/src/components/ui/FollowButton.jsx
+ M frontend/src/components/ui/PaymentMethods.jsx
+ M frontend/src/components/ui/PaywallModal.jsx
+ M frontend/src/components/ui/PermissionDeniedModal.jsx
+ D frontend/src/components/ui/RecommendationCard.jsx
+ M frontend/src/components/ui/SignOutButton.jsx
+ D frontend/src/components/ui/StatCard.jsx
+ M frontend/src/components/ui/TimezoneSelector.jsx
+ M frontend/src/index.css
+ D frontend/src/logo.svg
+ M frontend/src/pages/AboutUs.jsx
+ M frontend/src/pages/AcceptInvite.jsx
+ M frontend/src/pages/Blog.jsx
+ M frontend/src/pages/Careers.js
+ M frontend/src/pages/Community.jsx
+ M frontend/src/pages/ContactUs.jsx
+ M frontend/src/pages/CookiesPolicy.jsx
+ D frontend/src/pages/Dashboard.jsx
+ M frontend/src/pages/ForgotPassword.jsx
+ M frontend/src/pages/InterviewAnalysis.jsx
+ M frontend/src/pages/InterviewRoom.jsx
+ M frontend/src/pages/NotFound.jsx
+ M frontend/src/pages/Notifications.jsx
+ M frontend/src/pages/PrivacyPolicy.jsx
+ D frontend/src/pages/PublicProfile.jsx
+ M frontend/src/pages/PublicProfileBySlug.jsx
+ M frontend/src/pages/RecruAILanding.js
+ M frontend/src/pages/Register.js
+ M frontend/src/pages/ResetPassword.jsx
+ M frontend/src/pages/SearchResults.jsx
+ M frontend/src/pages/SignIn.js
+ M frontend/src/pages/TermsAndConditions.jsx
+ M frontend/src/pages/cvai/CvaiAuthoring.jsx
+ M frontend/src/pages/cvai/CvaiInterviews.jsx
+ M frontend/src/pages/cvai/CvaiOverview.jsx
+ M frontend/src/pages/cvai/CvaiPlan.jsx
+ M frontend/src/pages/cvai/CvaiProjects.jsx
+ M frontend/src/pages/cvai/CvaiQuizzes.jsx
+ M frontend/src/pages/cvai/CvaiShell.jsx
+ M frontend/src/pages/cvai/CvaiSkills.jsx
+ D frontend/src/pages/dashboards/IndividualDashboard.jsx
+ M frontend/src/pages/dashboards/OrganizationDashboard.jsx
+ M frontend/src/pages/individual/AIAgents.jsx
+ M frontend/src/pages/individual/Analytics.jsx
+ D frontend/src/pages/individual/AppliedJobs.jsx
+ M frontend/src/pages/individual/InterviewDetail.jsx
+ D frontend/src/pages/individual/InterviewHistory.jsx
+ M frontend/src/pages/individual/Interviews.jsx
+ M frontend/src/pages/individual/JobAlerts.jsx
+ M frontend/src/pages/individual/JobDetails.jsx
+ M frontend/src/pages/individual/Jobs.jsx
+ M frontend/src/pages/individual/MyNetwork.jsx
+ M frontend/src/pages/individual/PracticeDashboard.jsx
+ M frontend/src/pages/individual/PracticeRoom.jsx
+ M frontend/src/pages/individual/Profile.jsx
+ M frontend/src/pages/individual/ResumeBuilder.jsx
+ D frontend/src/pages/individual/SavedJobs.jsx
+ M frontend/src/pages/individual/Settings.jsx
+ M frontend/src/pages/individual/ShareableProfiles.jsx
+ D frontend/src/pages/individual/UpcomingInterviews.jsx
+ M frontend/src/pages/individual/components/AboutModal.jsx
+ M frontend/src/pages/individual/components/CompanySearchInput.jsx
+ M frontend/src/pages/individual/components/ItemModal.jsx
+ M frontend/src/pages/individual/components/Modal.jsx
+ M frontend/src/pages/individual/components/PersonalInfoModal.jsx
+ M frontend/src/pages/individual/components/ProfileBanner.jsx
+ M frontend/src/pages/individual/components/ProfileTabs.jsx
+ M frontend/src/pages/individual/components/SectionHeader.jsx
+ M frontend/src/pages/individual/components/sections/AchievementsSection.jsx
+ M frontend/src/pages/individual/components/sections/AwardsSection.jsx
+ M frontend/src/pages/individual/components/sections/CertificationsSection.jsx
+ M frontend/src/pages/individual/components/sections/ConferencesSection.jsx
+ M frontend/src/pages/individual/components/sections/CoursesSection.jsx
+ M frontend/src/pages/individual/components/sections/EducationSection.jsx
+ M frontend/src/pages/individual/components/sections/ExperienceSection.jsx
+ M frontend/src/pages/individual/components/sections/HobbiesSection.jsx
+ M frontend/src/pages/individual/components/sections/LicensesSection.jsx
+ M frontend/src/pages/individual/components/sections/MembershipsSection.jsx
+ M frontend/src/pages/individual/components/sections/PatentsSection.jsx
+ M frontend/src/pages/individual/components/sections/ProjectsSection.jsx
+ M frontend/src/pages/individual/components/sections/PublicationsSection.jsx
+ M frontend/src/pages/individual/components/sections/ReferencesSection.jsx
+ M frontend/src/pages/individual/components/sections/SkillsSection.jsx
+ M frontend/src/pages/individual/components/sections/SocialSection.jsx
+ M frontend/src/pages/individual/components/sections/SpeakingSection.jsx
+ M frontend/src/pages/individual/components/sections/VolunteerSection.jsx
+ M frontend/src/pages/organization/AIAgents.jsx
+ M frontend/src/pages/organization/Billing.jsx
+ M frontend/src/pages/organization/BrowseOrganizations.jsx
+ M frontend/src/pages/organization/CandidateAnalysis.jsx
+ M frontend/src/pages/organization/Candidates.jsx
+ M frontend/src/pages/organization/HirePeople.jsx
+ M frontend/src/pages/organization/Insights.jsx
+ M frontend/src/pages/organization/Integrations.jsx
+ M frontend/src/pages/organization/InterviewManagement.jsx
+ M frontend/src/pages/organization/JobPostDetails.jsx
+ M frontend/src/pages/organization/JobPosts.jsx
+ M frontend/src/pages/organization/OrganizationAnalytics.jsx
+ M frontend/src/pages/organization/Pipeline.jsx
+ M frontend/src/pages/organization/Profile.jsx
+ M frontend/src/pages/organization/Reports.jsx
+ M frontend/src/pages/organization/Settings.jsx
+ M frontend/src/pages/organization/TeamMembers.jsx
+ M frontend/src/pages/organization/UserProfile.jsx
+ M frontend/src/pages/page/CreatePage.jsx
+ M frontend/src/pages/page/Overview.jsx
+ M frontend/src/pages/page/PageProfile.jsx
+ M frontend/src/pages/page/Settings.jsx
+ M frontend/src/pages/page/Visibility.jsx
+ M frontend/src/setupTests.js
+ M frontend/src/utils/cvai.js
+ D frontend/src/utils/performance.js
+?? SYSTEM.md
+?? frontend/src/components/RequireOrganization.js
+?? frontend/src/components/feed/
+?? frontend/src/components/jobs/
+?? frontend/src/components/layout/AppShell.jsx
+?? frontend/src/components/layout/OrgAppShell.jsx
+?? frontend/src/components/layout/Sidebar.jsx
+?? frontend/src/components/layout/UtilityRail.jsx
+?? frontend/src/components/layout/navStyles.js
+?? frontend/src/components/motion/
+?? frontend/src/components/profile/
+?? frontend/src/components/ui/Button.jsx
+?? frontend/src/components/ui/EmptyState.jsx
+?? frontend/src/components/ui/Input.jsx
+?? frontend/src/stageshow/

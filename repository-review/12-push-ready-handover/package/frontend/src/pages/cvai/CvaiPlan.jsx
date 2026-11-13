@@ -1,0 +1,355 @@
+import React, { useCallback, useEffect, useState } from "react";
+import CvaiShell, { Panel, Stat, Badge, Button, Loading, ErrorNote, LockedNote, EmptyNote, Meter } from "../cvai/CvaiShell";
+import {
+  cvai, isLocked, messageOf, PRIORITY_TONE,
+} from "../../utils/cvai";
+import { CheckCircle2, Clock, PlusCircle } from "lucide-react";
+
+/**
+ * Your plan: what you are working towards, how far through it you are, and what
+ * to do next.
+ *
+ * There is no money input, deliberately. A $5 learner used to get a thinner
+ * curriculum than a $100 learner, which had nothing to do with what either of
+ * them paid us — the subscription is what unlocks this, so the plan is the same
+ * for everyone who has it.
+ *
+ * One question remains: how many hours a week do you actually have? That shapes
+ * the schedule and is reported honestly. If the work needs nine weeks, the plan
+ * says nine weeks rather than trimming steps to make the number look better.
+ */
+export default function CvaiPlan() {
+  const [plans, setPlans] = useState([]);
+  const [progress, setProgress] = useState(null);
+  const [suggestions, setSuggestions] = useState([]);
+  const [options, setOptions] = useState(null);
+  const [locked, setLocked] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [creating, setCreating] = useState(false);
+  const [busyStep, setBusyStep] = useState(null);
+
+  const [form, setForm] = useState({ goal: "", weekly_hours: 5, target_weeks: 12 });
+  const [expanded, setExpanded] = useState(null);
+  const [detail, setDetail] = useState(null);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    const [plansRes, progressRes, suggestionsRes, optionsRes] = await Promise.all([
+      cvai.plans(),
+      cvai.overallProgress(),
+      cvai.suggestions(),
+      cvai.planOptions(),
+    ]);
+
+    if (isLocked(plansRes)) { setLocked(true); setLoading(false); return; }
+    if (!plansRes.ok) { setError(messageOf(plansRes, "Could not load your plan.")); setLoading(false); return; }
+
+    setPlans(plansRes.data?.plans || []);
+    setProgress(progressRes.data || null);
+    const s = suggestionsRes.data || {};
+    setSuggestions(s.suggestions || []);
+    setOptions(optionsRes.data || null);
+    setLocked(false);
+    setLoading(false);
+  }, []);
+
+  useEffect(() => { load(); }, [load]);
+
+  async function createPlan(event) {
+    event.preventDefault();
+    setCreating(true);
+    setError("");
+    const res = await cvai.createPlan({
+      goal: form.goal,
+      weekly_hours: Number(form.weekly_hours) || 5,
+      target_weeks: form.target_weeks === "" ? null : Number(form.target_weeks) || 12,
+    });
+    setCreating(false);
+    if (!res.ok) { setError(messageOf(res, "Could not build a plan.")); return; }
+    setForm({ goal: "", weekly_hours: 5, target_weeks: 12 });
+    await load();
+  }
+
+  async function toggleStep(plan, step) {
+    setBusyStep(step.id);
+    const next = step.status === "done" ? "in_progress" : "done";
+    const res = await cvai.setStep(plan.id, step.id, next);
+    setBusyStep(null);
+    if (!res.ok) { setError(messageOf(res, "Could not update that step.")); return; }
+    await load();
+    if (expanded === plan.id) {
+      const fresh = await cvai.plan(plan.id);
+      if (fresh.ok) setDetail(fresh.data?.plan || null);
+    }
+  }
+
+  async function expand(plan) {
+    if (expanded === plan.id) { setExpanded(null); setDetail(null); return; }
+    setExpanded(plan.id);
+    const res = await cvai.plan(plan.id);
+    setDetail(res.ok ? res.data?.plan || null : null);
+  }
+
+  const active = plans.filter((p) => p.status !== "completed");
+
+  return (
+    <CvaiShell
+      title="My plan"
+      subtitle="Built from what has actually been measured on your profile, then fitted to your timeline. The starter plan comes first; later work is shown as your full path."
+    >
+      {locked ? (
+        <LockedNote what="Mentorship planning" />
+      ) : (
+        <div className="space-y-5">
+          {error ? <ErrorNote onRetry={load}>{error}</ErrorNote> : null}
+
+          {loading ? (
+            <Loading label="Loading your plan" />
+          ) : (
+            <>
+              {progress ? (
+                <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                  <Stat value={`${progress.overall_pct || 0}%`} label="Overall progress" />
+                  <Stat value={active.length} label="Active plans" />
+                  <Stat
+                    value={progress.behind_count || 0}
+                    label="Behind schedule"
+                    tone={progress.behind_count ? "text-amber-700 dark:text-amber-400" : "text-ink"}
+                  />
+                  <Stat value={progress.skills_assessed || 0} label="Skills measured" />
+                </div>
+              ) : null}
+
+              {suggestions.length ? (
+                <Panel title="Do this next" hint="Ranked, and every one states its reason.">
+                  <div className="space-y-2.5">
+                    {suggestions.slice(0, 3).map((s, i) => (
+                      <div key={`${s.kind}-${i}`} className={`rounded-xl border p-4 shadow-s5 ${PRIORITY_TONE[s.priority] || PRIORITY_TONE.normal}`}>
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <p className="text-sm font-semibold text-ink">{s.title}</p>
+                          {s.priority === "urgent" || s.priority === "high" ? (
+                            <Badge className="border-line dark:border-line bg-surface dark:bg-gray-25 text-ink uppercase">
+                              {s.priority}
+                            </Badge>
+                          ) : null}
+                        </div>
+                        <p className="mt-1 text-xs leading-relaxed text-secondary">{s.reason}</p>
+                      </div>
+                    ))}
+                  </div>
+                </Panel>
+              ) : null}
+
+              <Panel title="Build a plan" hint="Costs AI tokens. The starter plan fits your timeline; later steps stay visible as your full path.">
+                <form onSubmit={createPlan} className="grid gap-3 md:grid-cols-[2fr_1fr_1fr_auto] md:items-end">
+                  <label className="block">
+                    <span className="text-xs font-medium text-ink">
+                      What are you aiming for?
+                    </span>
+                    <input
+                      value={form.goal}
+                      onChange={(e) => setForm({ ...form, goal: e.target.value })}
+                      placeholder="Become interview-ready for a backend role"
+                      className="mt-1 w-full rounded-xl border border-line dark:border-line bg-surface dark:bg-gray-25 px-3.5 py-2 text-sm text-ink outline-none transition-colors placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="text-xs font-medium text-ink">
+                      Hours each week
+                    </span>
+                    <input
+                      type="number"
+                      min="1"
+                      max="40"
+                      value={form.weekly_hours}
+                      onChange={(e) => setForm({ ...form, weekly_hours: e.target.value })}
+                      className="mt-1 w-full rounded-xl border border-line dark:border-line bg-surface dark:bg-gray-25 px-3.5 py-2 text-sm font-mono text-ink outline-none transition-colors placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="text-xs font-medium text-ink">
+                      Starter plan length
+                    </span>
+                    <select
+                      value={form.target_weeks}
+                      onChange={(e) => setForm({ ...form, target_weeks: e.target.value })}
+                      className="mt-1 w-full rounded-xl border border-line dark:border-line bg-surface dark:bg-gray-25 px-3.5 py-2 text-sm text-ink outline-none transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20"
+                    >
+                      <option value={8}>8 weeks</option>
+                      <option value={12}>12 weeks</option>
+                      <option value={16}>16 weeks</option>
+                      <option value={26}>26 weeks</option>
+                      <option value={52}>52 weeks</option>
+                      <option value="">No deadline</option>
+                    </select>
+                  </label>
+                  <Button type="submit" disabled={creating || !form.goal.trim()}>
+                    <PlusCircle className="h-4 w-4" strokeWidth={1.75} /> {creating ? "Building…" : "Build plan"}
+                  </Button>
+                </form>
+                {options?.levels ? (
+                  <p className="mt-2 text-xs leading-relaxed text-secondary">
+                    Levels run {options.levels[0]} → {options.levels[options.levels.length - 1]}.
+                    The starter plan is fitted to your timeline; work that does not fit is shown
+                    separately as the full path. At 5h/week, a 12-week starter plan is about 60 hours.
+                  </p>
+                ) : null}
+              </Panel>
+
+              <Panel title="Your plans">
+                {plans.length === 0 ? (
+                  <EmptyNote>
+                    No plan yet. Build a starter plan above and it will be fitted to your measured
+                    gaps and timeline, with the remaining work shown as your full path.
+                  </EmptyNote>
+                ) : (
+                  <div className="space-y-4">
+                    {plans.map((plan) => (
+                      <PlanCard
+                        key={plan.id}
+                        plan={plan}
+                        expanded={expanded === plan.id}
+                        detail={expanded === plan.id ? detail : null}
+                        busyStep={busyStep}
+                        onExpand={() => expand(plan)}
+                        onToggleStep={(step) => toggleStep(plan, step)}
+                      />
+                    ))}
+                  </div>
+                )}
+              </Panel>
+            </>
+          )}
+        </div>
+      )}
+    </CvaiShell>
+  );
+}
+
+function PlanCard({ plan, expanded, detail, busyStep, onExpand, onToggleStep }) {
+  const done = plan.completed_step_count || 0;
+  const total = plan.step_count || 0;
+  const pct = total ? Math.round((done / total) * 100) : 0;
+  const steps = detail?.steps || [];
+  const deferred = detail?.deferred_steps || [];
+
+  return (
+    <div className="rounded-xl border border-line dark:border-line bg-surface dark:bg-gray-25/90 shadow-s5 overflow-hidden">
+      <button
+        type="button"
+        onClick={onExpand}
+        className="flex w-full flex-wrap items-center justify-between gap-3 p-4 text-left transition-colors hover:bg-gray-100 dark:hover:bg-gray-25/40"
+      >
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-ink">{plan.goal}</p>
+          <div className="mt-1.5 flex flex-wrap items-center gap-2 text-xs text-secondary">
+            <span className="inline-flex items-center gap-1">
+              <Clock className="h-3.5 w-3.5" strokeWidth={1.75} /> <span className="font-mono">{plan.total_hours || 0}</span>h over <span className="font-mono">{plan.weeks || "?"}</span>w
+            </span>
+            <span>•</span>
+            <span><span className="font-mono">{plan.weekly_hours}</span>h/week</span>
+            <span>•</span>
+            {plan.total_cost ? (
+              <span className="text-secondary">{plan.total_cost} of paid resources</span>
+            ) : (
+              <span>free resources</span>
+            )}
+          </div>
+        </div>
+        <div className="w-full max-w-[200px]">
+          <div className="flex items-center justify-between text-xs text-secondary">
+            <span><span className="font-mono">{done}/{total}</span> steps</span>
+            <span className="font-semibold font-mono text-ink">{pct}%</span>
+          </div>
+          <div className="mt-1.5">
+            <Meter value={pct} tone="bg-brand" />
+          </div>
+        </div>
+      </button>
+
+      {plan.trimmed ? (
+        <div className="border-t border-line dark:border-line bg-amber-50 dark:bg-amber-500/10 px-4 py-3 text-xs leading-relaxed text-amber-800 dark:text-amber-300">
+          Starter plan fitted to your timeline. {plan.trim_reason}
+        </div>
+      ) : null}
+
+      {plan.deferred_step_count ? (
+        <div className="border-t border-line dark:border-line bg-gray-50 dark:bg-gray-25/80 px-4 py-3 text-xs leading-relaxed text-secondary dark:text-gray-700">
+          Full path: <span className="font-mono">{plan.full_total_hours}</span>h over <span className="font-mono">{plan.full_weeks}</span>w · <span className="font-mono">{plan.deferred_step_count}</span> later
+          {plan.deferred_step_count === 1 ? " step" : " steps"} beyond the starter plan.
+        </div>
+      ) : null}
+
+      {expanded ? (
+        <>
+          {steps.length ? (
+            <ol className="space-y-2.5 border-t border-line dark:border-line p-4">
+              {steps.map((step, index) => {
+                const isDone = step.status === "done";
+                return (
+                  <li key={step.id} className="flex items-start gap-3 rounded-xl border border-line dark:border-line bg-surface dark:bg-gray-25 p-3.5 shadow-s5">
+                    <button
+                      type="button"
+                      disabled={busyStep === step.id}
+                      onClick={() => onToggleStep(step)}
+                      className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border transition-colors ${
+                        isDone
+                          ? "border-brand bg-brand text-white shadow-s5"
+                          : "border-line dark:border-line bg-surface dark:bg-gray-25 text-transparent hover:border-brand"
+                      }`}
+                      title={isDone ? "Mark not done" : "Mark done"}>
+                      <CheckCircle2 className="h-4 w-4" strokeWidth={2} />
+                    </button>
+                    <div className="min-w-0 flex-1">
+                      <p className={`text-sm font-medium ${isDone ? "text-secondary line-through" : "text-ink"}`}>
+                        {index + 1}. {step.title}
+                      </p>
+                      {step.description ? (
+                        <p className="mt-0.5 text-xs leading-relaxed text-secondary">{step.description}</p>
+                      ) : null}
+                      <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[11px] text-secondary">
+                        {step.resource_name ? (
+                          <Badge className="capitalize">{step.resource_type}</Badge>
+                        ) : null}
+                        {step.resource_name ? <span>{step.resource_name}</span> : null}
+                        <span><span className="font-mono">{step.hours_estimate}</span>h</span>
+                        {step.cost ? <span>{step.cost} cost</span> : null}
+                        {step.optional ? <Badge>Optional</Badge> : null}
+                        {step.target_date ? <span>by <span className="font-mono">{new Date(step.target_date).toLocaleDateString()}</span></span> : null}
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+          ) : null}
+
+          {deferred.length ? (
+            <details className="border-t border-line dark:border-line">
+              <summary className="cursor-pointer px-4 py-3 text-xs font-medium text-ink hover:text-brand-text">
+                Full path · <span className="font-mono">{deferred.length}</span> later {deferred.length === 1 ? "step" : "steps"}
+              </summary>
+              <ol className="space-y-2.5 px-4 pb-4">
+                {deferred.map((step, index) => (
+                  <li key={`${step.skill_slug || "later"}-${index}`} className="rounded-xl border border-line dark:border-line bg-surface dark:bg-gray-25 p-3.5 shadow-s5">
+                    <p className="text-sm font-medium text-ink">{step.title}</p>
+                    {step.description ? (
+                      <p className="mt-0.5 text-xs leading-relaxed text-secondary">{step.description}</p>
+                    ) : null}
+                    <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[11px] text-secondary">
+                      <Badge>Later</Badge>
+                      {step.resource_name ? <span>{step.resource_name}</span> : null}
+                      <span><span className="font-mono">{step.hours_estimate}</span>h</span>
+                      {step.cost ? <span>{step.cost} cost</span> : null}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          ) : null}
+        </>
+      ) : null}
+    </div>
+  );
+}

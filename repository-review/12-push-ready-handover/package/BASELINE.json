@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-11-13T16:09:17.757Z",
+  "source_branch": "adeeldev",
+  "source_head": "47f2cd01c0a15f91ff9bafb18ecfcd26180ddcea",
+  "target_branch": "underdev",
+  "target_commit": "72480fbc2acf0b9d7ef696140f6320a5e9c2d60e",
+  "target_remote_ref": "upstream/underdev",
+  "test_only_change": "frontend/src/__tests__/PageProfile.test.js seeds an in-memory access token so the existing PageProfile tests use the mocked /api/auth/me response instead of the real /api/auth/refresh path.",
+  "counts": {
+    "add": 187,
+    "modify": 138,
+    "delete": 24,
+    "total_operations": 349
+  }
+}

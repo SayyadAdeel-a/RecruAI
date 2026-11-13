@@ -1,0 +1,2 @@
+frontend-handover.patch  9b54bc25b7e73421c3e5ef1f6e91647099362585a01b2f4ba48325047482aac6
+frontend-handover.zip    3f57dc6b1fdf299c76b7da622dc328d76b9ec4098c6f304b0c54582e7600ee62

@@ -1,0 +1,9 @@
+{
+  "applied": 184,
+  "deleted": 23,
+  "missingDeletions": [
+    "frontend/src/components/ui/Segmented.jsx",
+    "frontend/src/components/ui/Tabs.jsx"
+  ],
+  "targetStatusCount": 166
+}
